@@ -1,0 +1,596 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-----styles-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/dropzone.css">
+	
+<style>
+
+@import 'https://fonts.googleapis.com/css?family=Poiret+One'; 
+@import 'https://fonts.googleapis.com/css?family=Baloo+Paaji|Maven+Pro';
+
+section.module h2 {
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+
+section.module p {
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+section.module.content {
+  padding: 40px 0;
+  box-shadow:8px 8px 8px 8px;
+}
+section.module.parallax {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+	
+
+
+#about h3 {
+    color:#666666;
+	font-size:40px;
+	display:block;
+	font-weight:700;
+	font-family: 'Maven Pro', sans-serif;
+	line-height:100px;
+}
+
+.heading {
+    margin-bottom:40px;
+}
+
+.heading h1{
+    font-size:60px;
+	font-weight:700;
+	font-family: 'Maven Pro', sans-serif;
+	color:#666666;
+}
+
+.heading h4{
+    color:#666666;
+    font-size:24px;
+	font-family: 'Maven Pro', sans-serif;
+}
+
+#about p {
+    color:#666666;
+	font-size:18px;
+	font-family: 'Maven Pro', sans-serif;
+	font-weight:600;
+}
+
+.about_2 {
+    position:relative;
+	top:10px;
+	color:#666666;
+	font-weight:700;
+	font-size:18px;
+	font-family: 'Maven Pro', sans-serif;
+}
+
+.share_card {
+    margin:20px;
+    padding:20px;
+	background:#fff;
+	border:0;
+	outline:none;
+	border:1px solid #666666;
+	box-shadow: 12px 12px 12px 0px;
+}
+
+    .panel-group .panel-heading {
+	    background:#fff;
+	    box-shadow:0px 4px 4px 0px;
+		border-radius:0;
+		font-family: 'Maven Pro', sans-serif;
+		font-size:18px;
+    }    
+
+    .panel-group .panel-body {
+        box-shadow:0px 0px 4px 0px; 
+		font-family: 'Maven Pro', sans-serif;
+		font-size:18px;
+    }
+   .btn_primary {
+	    background:#fff;
+		font-family: 'Maven Pro', sans-serif;
+		width:250px;
+		border-radius:0;
+		font-weight:700;
+	}
+	
+	.btn_danger {
+	    background:#fff;
+		font-family: 'Maven Pro', sans-serif;
+		width:250px;
+		border-radius:0;
+		font-weight:700;
+	}
+	
+	button a {
+	    color:#666666;
+		text-decoration:none;
+	}
+	
+	.btn {
+	    box-shadow:4px 4px 4px 0px;
+	}
+	
+	.cont_card {
+	    padding:20px;
+		margin:20px;
+		border:1px solid #666666;
+		background:#fff;
+		color:#666666;
+		height:630px;
+		font-weight:700;
+	    outline:none;
+		box-shadow: 12px 12px 12px 0px;
+	}
+		
+    .head {
+        font-family: 'Maven Pro', sans-serif;
+		font-size:40px;
+		font-weight:700;
+	}
+	
+	.dash_cont {
+	    padding:10px;
+	}
+	
+	.dash_cont h4 {
+	    font-family: 'Maven Pro', sans-serif;
+		color:#666666;
+		font-size:16px;
+		font-weight:500;
+	}
+	
+	input {
+	    margin-top:5px;
+	    margin-bottom:20px;
+		margin-right:100px;
+		font-family: 'Maven Pro', sans-serif;
+		height:25px;
+		width:200px;
+		color:#666666;
+		font-weight:700;
+	}
+	
+	form {
+	    margin-top:15px;
+	    color:#666666;
+		font-family: 'Maven Pro', sans-serif;
+		font-weight:700;
+		font-size:16px;
+	}
+	
+	.submit {
+	   height:35px;
+	   position:relative;
+	   width:100px;
+	   font-family: 'Maven Pro', sans-serif;
+	   color:#666666;
+	   background:#fff;
+	}
+	
+	.cont_card_1 {
+	    padding:20px;
+		margin:20px;
+		background:#fff;
+		color:#666666;
+		height:850px;
+		font-weight:700;
+		border:0;
+	    outline:none;
+	}
+		
+    .head_1 {
+        font-family: 'Maven Pro', sans-serif;
+		font-size:30px;
+		font-weight:700;
+	}
+	
+	.dash_cont_1 {
+	    padding:20px;
+	}
+	
+	.dash_cont_1 p {
+	    font-family: 'Maven Pro', sans-serif;
+		font-weight:700;
+		color:#666666;
+		font-size:20px;
+		font-weight:700;
+	}
+	
+	figcaption {
+	    padding-top:20px;
+	    font-family: 'Poiret One', cursive;
+		font-weight:700;
+		color:#666666;
+		font-size:20px;
+		font-weight:700;
+	}
+	
+	.profile {
+	    border:1px solid #666666;
+	    background:#fff;
+		padding:5px 0px 20px 0px;
+		font-family: 'Maven Pro', sans-serif;
+		color:666666;
+		font-weight:700;
+		position:relative;
+		box-shadow: 12px 12px 12px 0px;
+	}
+	
+	.caption h2{
+	    font-size:36px;
+		font-weight:700;
+	}
+	
+	.creden { 
+	    position:relative;
+		top:20px;
+		font-size:20px;
+		font-family: 'Maven Pro', sans-serif;
+		font-weight:700;
+	}
+	
+	.navbar-default {
+	    background:#fff;
+		border:0;
+		outline:none;
+		border-radius:0;
+		box-shadow:0px 0px 6px 0px;
+	}
+	
+	.navbar-default .navbar-header a { 
+		font-family: 'Maven Pro', sans-serif;
+		font-weight:700;
+	}		
+	
+	.navbar-nav li a{
+	    color:#fff;
+		font-family: 'Maven Pro', sans-serif;
+		font-weight:700;
+	}
+		 
+section.module.parallax-1 {
+  background-image:url('Images/white.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position:center center;
+}
+section.module.parallax-2 {
+  background-image:url('Images/white.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position:center center;
+}
+section.module.parallax-3 {
+  background-image:url('Images/white.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position:center center;
+}
+
+.slide {
+  opacity: 0;
+  font-family: 'Maven Pro', sans-serif;
+  -moz-transition: all 500ms linear;
+  -webkit-transition: all 500ms linear;
+  -o-transition: all 500ms linear;
+  transition: all 500ms linear;
+  -moz-transform: translate3d(-100px, 0px, 0px);
+  -webkit-transform: translate3d(-100px, 0px, 0px);
+  -o-transform: translate(-100px, 0px);
+  -ms-transform: translate(-100px, 0px);
+  transform: translate3d(-100px, 0px, 0px);
+}
+
+.hasSlid {
+  opacity: 1;
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.padding-enlarge {
+   -moz-transition: padding-top .15s ease-in-out, padding-bottom .15s ease-in-out;
+     -o-transition: padding-top  .15s ease-in-out, padding-bottom .15s ease-in-out;
+     -webkit-transition: padding-top  .15s ease-in-out, padding-bottom .15s ease-in-out;
+     transition: padding-top  .15s ease-in-out, padding-bottom .15s ease-in-out;
+	 box-shadow: 8px 8px 8px 0px;
+	 border:2px solid #666666;
+	 outline:none;
+}
+
+.padding-enlarge:hover {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<!--http://callmenick.com/post/simple-parallax-scrolling-effect-->
+
+<section class="module parallax parallax-1">
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">TRONOSER</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">Home</a></li>
+	  <li><a href="#history">History</a></li>
+	  <li><a href="#dash">Dashboard</a></li>
+	  <li><a href="#faq">FAQ</a></li>
+	  <li><a href="#about">About us</a></li>
+	  <li><a href="#contact">Contact us</a></li>
+    </ul>
+  </div>
+ </nav>
+  <div class="container">
+  <div class="back">
+  <div class="heading text-center">
+	    <h1>TRONOSER</h1><br><br>
+		<h4>The best solution to send big files to your clients, friends and family. We provide 100% secure, fast and reliable delivery for each and every file you send through Tronoser.</h4>
+  </div>
+  </div>
+  </div>
+</section>
+
+<section class="module content" id="history">
+  <div class="container padding-enlarge">
+    <h2 class="slide">History.</h2>
+    <p class="slide">The best solution to send big files to your clients, friends and family. We provide 100% secure, fast and reliable delivery for each and every file you send through Tronoser. This service is provided absolutely free without any login or subscription.</p>
+	<p class="slide">The best solution to send big files to your clients, friends and family. We provide 100% secure, fast and reliable delivery for each and every file you send through Tronoser. This service is provided absolutely free without any login or subscription.</p>
+  </div>
+</section>
+
+<section class="module parallax parallax-2" id="dash">
+    <div class="container">
+	<!-------------------------for smaller devices----------->
+	
+	 <div class="row visible-xs visible-sm">
+		<div class="col-sm-12 col-xs-12 col-lg-4 col-md-4">
+          <div class="cont_card_1">
+            <div class="head_1 text-center">Dashboard</div><br>
+			<div class="dash_1_cont">
+			<p>All the fields are mandatory except the receiver's mobile number,which is optional.If you wish to send the password on receiver's mobile,go ahead and drop the number.</p>
+				<form action="action_page.php">
+                    Sender's Number:<br>
+                   <input type="number" name="number"  required>
+                   <br>
+                   Sender's Email:<br>
+                   <input type="email" name="email" required>
+                    Receiver's Number:<br>
+                   <input type="number" name="number" required>
+                   <br>
+                   Receiver's Email:<br>
+                   <input type="email" name="email" required>
+				   <br>
+				   Subject:<br>
+                   <input type="text" name="subject" required>
+                </form>
+				<form action="/file-upload" class="dropzone" id="my-awesome-dropzone" style="font-family: 'Maven Pro', sans-serif;"></form>
+				<input type="submit" value="Submit" class="submit">
+		  </div>
+		</div> 
+     </div>
+	</div>
+	
+	<!------------------------------------------------------->
+	  <div class="row visible-lg visible-md">
+	  <div class="col-xs-12 col-lg-4 col-md-4">
+	  <br>
+        <div class="share_card">
+            <button class="btn btn-default btn_primary"><a href="#">Login with Facebook</a></button>
+			<br><br>
+			<button class="btn btn-default btn_danger"><a href="#">Login with Google</a></button>
+        </div>
+		<br>
+		<div class="profile">
+		    <div class="caption text-center">
+            <h2>Welcome Back.</h2>
+            </div>
+		    <div class="image text-center">
+			<img src="Images/man.png" class="gif">
+			</div>
+		<div class="creden text-center">Jack Daniels<br><br>7869356895</div>
+        </div>
+		</div>
+	  <div class="col-xs-12 col-lg-8 col-md-8">
+        <div class="cont_card">
+            <div class="head text-center">Dashboard</div>
+			<div class="dash_cont">
+			<h4>All the fields are mandatory except the receiver's mobile number,which is optional.If you wish to send the password on receiver's mobile,go ahead and drop the number.</h4>
+			<table>
+			   <tr><td>
+				<form action="action_page.php">
+                    Sender's Number:<br>
+                   <input type="number" name="number"  required>
+                   <br>
+                   Sender's Email:<br>
+                   <input type="email" name="email" required>
+				   <br>
+				   Subject:<br>
+                   <input type="text" name="subject" required>
+                </form>
+				</td>
+				<td>
+				<form action="action_page.php">
+                    Receiver's Number:<br>
+                   <input type="number" name="number" required>
+                   <br>
+                   Receiver's Email:<br>
+                   <input type="email" name="email" required>
+				   <br>
+				   Subject:<br>
+                   <input type="text" name="subject" required>
+                </form>
+				</td></tr>
+			</table>
+				<form action="/file-upload" class="dropzone" id="my-awesome-dropzone" style="font-family: 'Maven Pro', sans-serif;"></form>
+				<input type="submit" value="Submit" class="submit">
+			</div> 
+        </div>
+	  </div>
+    </div>
+  </div>
+</section>
+
+<section class="module content" id="faq">
+  <div class="container padding-enlarge">
+    <h2 class="slide">FAQ's</h2>
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">What is front end?</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">What is the difference between front end and back end?</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+	<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">What is the difference between web designing and web development?</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+	<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Is future in FE is better than BE?</a>
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">What comes under front end and back end development?</a>
+        </h4>
+      </div>
+      <div id="collapse5" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+  </div> 
+  </div>
+</section>
+
+<section class="module parallax parallax-3">
+  <div class="container text-center">
+    <div id="about">
+	    <h3>About us.</h3>
+		<p>TRONOSER is a family of keen web and mobile developers who love to create useful, usable, beautiful and sustainable software with the best available technologies and techniques.
+		We specialise in all useful web technologies. , iOS & Android development, but we’ll use other technologies when it makes sense for the project – it’s all about using the right tool for the job.The bunch of services at TRONOSER include digital advertising, graphic designing, brochure design & marketing planning & brand management just to name a few.TRONOSER is a family of keen web and mobile developers who love to create useful, usable, beautiful and sustainable software with the best available technologies and techniques.
+		We specialise in all useful web technologies. , iOS & Android development, but we’ll use other technologies when it makes sense for the project – it’s all about using the right tool for the job.The bunch of services at TRONOSER include digital advertising, graphic designing, brochure design & marketing planning & brand management just to name a few.TRONOSER is a family of keen web and mobile developers who love to create useful, usable, beautiful and sustainable software with the best available technologies and techniques.
+		We specialise in all useful web technologies. , iOS & Android development, but we’ll use other technologies when it makes sense for the project – it’s all about using the right tool for the job.The bunch of services at TRONOSER include digital advertising, graphic designing, brochure design & marketing planning & brand management just to name a few.</p>
+	</div>
+  </div>
+</section>
+
+<section class="module content" id="contact">
+  <div class="container padding-enlarge">
+    <h2 class="slide text-center">Contact Us</h2>
+	<form role="form">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="message">Feedback:</label>
+      <input type="text" class="form-control" id="pwd" placeholder="Enter your feedback here.">
+    </div>
+	<div class="form-group">
+      <label for="sugg">Suggestions:</label>
+      <input type="text" class="form-control" id="pwd" placeholder="Enter your feedback here.">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+	<p class="slide"><b>Phone:</b>  +91-7400555577 &nbsp;&nbsp; <b>Email:</b> info@tronoser.com</p>
+  </div>
+</section>
+
+<script src="script/dropzone.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script>
+
+//http://www.sitepoint.com/scroll-based-animations-jquery-css3/
+var $animation_elements = $('.slide');
+var $window = $(window);
+function check_if_in_view() {
+  var window_height = $window.height();
+  var window_top_position = $window.scrollTop();
+  var window_bottom_position = (window_top_position + window_height);
+  $.each($animation_elements, function() {
+    var $element = $(this);
+    var element_height = $element.outerHeight();
+    var element_top_position = $element.offset().top;
+    var element_bottom_position = (element_top_position + element_height);
+    if ((element_bottom_position >= window_top_position) &&
+        (element_top_position <= window_bottom_position)) {
+      /*$element.animate({
+        marginLeft: 100
+      }, "slow").fadeIn("slow", 1);*/
+      $element.addClass('hasSlid');
+    } else {
+      $element.removeClass('hasSlid');
+    }
+  });
+}
+$window.on('scroll resize', check_if_in_view);
+$window.trigger('scroll');
+
+</script>
+</body>
+</html>
